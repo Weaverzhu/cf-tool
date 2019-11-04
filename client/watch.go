@@ -234,9 +234,9 @@ func parseSubmission(body []byte, cfOffset string) (ret Submission, err error) {
 		time:   getInt(".time-consumed-cell"),
 		memory: getInt(".memory-consumed-cell") * 1024,
 		when:   when,
-		passed: num,
-		judged: num,
-		points: num,
+		passed: -1,
+		judged: -1,
+		points: -1,
 		end:    end,
 	}, nil
 }
